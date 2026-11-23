@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 32px 16px;
+  font-family: system-ui, sans-serif;
+  background: #f3f1ec;
+  color: #1d2430;
+}
+
+header {
+  max-width: 960px;
+  margin: 0 auto 24px;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 2rem;
+}
+
+button {
+  margin-top: 12px;
+  padding: 8px 16px;
+  font: inherit;
+  border: 0;
+  border-radius: 6px;
+  background: #1f5c99;
+  color: white;
+  cursor: pointer;
+}
+
+.cartoes {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.cartoes li {
+  padding: 16px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid #d9d4c7;
+}
+
+.cartoes li strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.cartoes li.vazia {
+  color: #8a8578;
+  background: transparent;
+  border-style: dashed;
+}

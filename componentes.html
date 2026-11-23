@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cartões com componente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Cartões com componente</h1>
+    <p>Todos os cartões desta página saem de uma única função: Cartao.</p>
+  </header>
+
+  <ul class="cartoes" id="lista"></ul>
+
+  <script>
+    // O componente: recebe os dados de uma pessoa e devolve o HTML de um cartão.
+    // Mude o visual aqui e todos os cartões mudam juntos.
+    function Cartao(pessoa) {
+      return `<li><strong>${pessoa.nome}</strong> ${pessoa.frase}</li>`;
+    }
+
+    // Os dados: uma pessoa por linha. Para um cartão novo, acrescente uma linha.
+    const pessoas = [
+      { nome: "Ana", frase: "Gosto de café e de futebol." },
+      { nome: "Bruno", frase: "Quero trabalhar com jogos." },
+      { nome: "Carla", frase: "Estou aprendendo Git hoje." },
+      { nome: "Diego", frase: "Gosto de desenhar interfaces." },
+    ];
+
+    // Monta a lista: chama o Cartao uma vez para cada pessoa.
+    document.querySelector("#lista").innerHTML = pessoas.map(Cartao).join("");
+  </script>
+</body>
+</html>
